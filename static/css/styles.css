@@ -1,0 +1,366 @@
+/*
+Grey Text Hex = 262626
+Green background & "select" status Hex Color: 9BB73B
+Yellow Hex Color = EEBD1C
+Grey color hex = cccccc
+Dark Grey Hex = 262626
+Red Text Hex Color = DA291C
+Dark red button color Hex = 440d09
+Yellow/Amber Text Hex Color = EEBD1C
+*/
+html {
+  margin: 0;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+html, body, #root, #root > div, #root > div > div {
+  height: 100%;
+}
+a {
+  color: #262626;
+}
+a:hover {
+  color: #9BB73B;
+}
+/* the bottom margin is the negative value of the footer's height */
+.fixfooter {
+  min-height: 100%;
+  margin: 0 auto -255px;
+}
+
+/* .push must be the same height as .footer */
+footer, .push {
+  height: 255px;
+}
+.fixfooter .form-group.pb {
+  padding-bottom: 8rem;
+}
+
+/*** HEADER ***/
+header {
+  padding-top: 30px;
+}
+img.logo {
+  display: block;
+  float: left;
+  width: auto;
+  height: 32px;
+}
+
+header h1 {
+  font-size: 23px;
+  line-height: 35px;
+  float: left;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+}
+header h1::before {
+  display: block;
+  float: left;
+  margin: 0 10px;
+  content: '|';
+}
+header div.lead {
+  font-weight: 600;
+  float: none;
+  clear: both;
+  margin: 10px 0;
+  margin-bottom: 30px;
+  padding: 19px;
+  color: rgb(255, 255, 255);
+  background: #9bb73b; /* Green */
+}
+header div.lead p.lead {
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #262626;
+}
+
+/*** FOOTER ***/
+footer {
+  font-size: 1.2em !important;
+  padding: 40px;
+  color: #fff;
+  background: rgb(138, 138, 138);
+}
+.contact button {
+  padding: 0;
+
+  border: none;
+  background: none;
+}
+footer a {
+  color: #fff;
+}
+footer .credits {
+  margin-top: 15px;
+}
+footer .credits .name {
+  font-weight: 700;
+}
+footer .copyright {
+  position: relative;
+  top: -20px;
+}
+
+/*** QUESTIONS ***/
+
+li {
+  font-size: 1.2em;
+}
+
+.list-group-item {
+  margin: 0;
+  padding: 25px 0 15px 0;
+
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.list-group-item::after {
+  display: table;
+  clear: both;
+
+  content: '';
+}
+.question > label {
+  display: flex;
+
+  margin-right: 50px;
+}
+.question label {
+  padding-left: 0;
+}
+.question > div label {
+  text-transform: uppercase;
+}
+.question label .question-index {
+  font-weight: 700;
+
+  margin-right: 20px;
+}
+.question label .question-index::after {
+  content: '.';
+}
+.question label .question-text {
+  font-weight: 400;
+}
+
+/*** FORM ELEMENTS ***/
+button.btn-success {
+  font-weight: 700;
+
+  margin-left: 65px;
+  padding: 5px 40px;
+
+  text-transform: uppercase;
+
+  color: #eebd1c;
+  border: 3px solid #eebd1c;
+  border-radius: 23px;
+  background-color: #fff;
+}
+.btn-success:focus,
+.btn-success:active,
+.btn-success:active:focus,
+.btn-success:hover {
+  color: #fff;
+  border: 3px solid #eebd1c;
+  background-color: #eebd1c;
+}
+button.btn-success[disabled] {
+  color: rgb(125, 125, 125);
+  border: 3px solid rgb(125, 125, 125);
+  background: rgb(155, 155, 155);
+}
+button.btn-success[disabled]:hover {
+  border: 3px solid rgb(125, 125, 125);
+  background: rgb(185, 185, 185);
+}
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio'] + label span.radio-toggle {
+  display: inline-block;
+
+  width: 13px;
+  height: 13px;
+
+  cursor: pointer;
+  vertical-align: middle;
+
+  -moz-border-radius: 50%;
+       border-radius: 50%;
+}
+input[type='radio'] + label span.radio-toggle {
+  margin: -2px 9px 0 30px;
+
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+input[type='radio'] + label:hover .radio-toggle {
+  background-color: rgba(155,183,59,.333333);
+}
+
+input[type='radio']:checked + label span.radio-toggle {
+  background-color: #9bb73b;
+}
+
+input[type='radio'] + label span.radio-toggle,
+input[type='radio']:checked + label span.radio-toggle {
+  -webkit-transition: background-color 0.2s linear;
+     -moz-transition: background-color 0.2s linear;
+       -o-transition: background-color 0.2s linear;
+          transition: background-color 0.2s linear;
+}
+
+/*** RESULTS ***/
+#results-overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  align-items: center;
+  justify-content: center;
+}
+#results-overlay #result-box {
+  overflow-y: scroll;
+
+  width: 80%;
+  max-width: 60em;
+  max-height: 95%;
+
+  background: #fff;
+}
+#result-box .score-top {
+  min-height: 180px;
+  padding: 20px;
+
+  color: #fff;
+  background: rgb(77, 77, 77);
+}
+#result-box .score-top::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#result-box .score-box {
+  font-size: 45px;
+  line-height: 100px;
+  box-sizing: border-box;
+  width: 150px;
+  margin-right: 20px;
+  padding: 0 20px;
+  text-align: center;
+  color: #9bb73b;
+  background: #fff;
+  vertical-align: middle;
+  display: inline-block;
+}
+#result-box .score-words {
+  font-size: 1.2em;
+  width: calc(100% - 170px);
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+#result-box .score-words p:last-of-type {
+  margin-bottom: 0;
+}
+
+#result-box .score-bottom {
+  padding: 40px;
+}
+#result-box .score-bottom h2 {
+  font-size: 1.4em;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  color: #da291c;
+}
+#result-box .action {
+  display: flex;
+
+  margin-top: 40px;
+}
+#result-box .action-box {
+  margin-right: 25px;
+  padding: 15px;
+
+  color: #fff;
+  background: #da291c;
+}
+#result-box .action-box button {
+  font-weight: 700;
+
+  margin-left: 30px;
+  padding: 5px 25px;
+
+  text-transform: uppercase;
+
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  background: #440d09;
+}
+#result-box .action-box button:hover {
+  color: #DA291C;
+}
+#result-box li {
+  margin: 15px 0;
+}
+#result-box .score-text {
+  font-size: 0.9em;
+  font-weight: 700;
+
+  padding-bottom: 10px;
+
+  text-transform: uppercase;
+}
+#result-box .score-text::after {
+  content: ':';
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 360px;
+  }
+  #result-box .action {
+    display: block;
+  }
+  #result-box .action-box button {
+    margin-left: 0;
+  }
+  header h1 {
+    font-size: 1.8em;
+    line-height: auto;
+
+    float: none;
+    clear: both;
+  }
+  header h1::before {
+    display: block;
+    float: left;
+
+    margin: 0 5px;
+
+    content: ' ';
+  }
+  button.btn-success {
+    margin: 0 auto;
+  }
+}
