@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react'
 import Contact from './Contact'
 import LearnMore from './LearnMore'
 
-function Footer({ author, currentYear, contact, copyright, learnMore }) {
+function Footer({ author, currentYear, contact = {}, copyright, learnMore }) {
   const { email, phone, web, name, address } = contact
 
   const copyText = `${currentYear} ${copyright}`
@@ -11,7 +11,7 @@ function Footer({ author, currentYear, contact, copyright, learnMore }) {
   return (
     <footer className="footer">
       <div className="container">
-        <LearnMore author={author} learnMore={learnMore} />
+        { learnMore && <LearnMore author={author} learnMore={learnMore} /> }
         <Contact email={email} phone={phone} web={web} />
         <div className="credits">
           <div className="name">{name}</div>

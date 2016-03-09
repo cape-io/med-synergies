@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import routeSelector from '../redux/routes'
 
 import Router from './Router'
-// import Footer from '../components/Footer'
 
 class App extends Component {
   render() {

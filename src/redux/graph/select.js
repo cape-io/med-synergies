@@ -4,8 +4,8 @@ import { createSelector } from 'reselect'
 
 // SPO
 export const graphSelector = state => state.graph
-export const tripleSelector = state => state.triple
-export const entitySelector = state => state.entity
+export const tripleSelector = state => graphSelector(state).triple
+export const entitySelector = state => graphSelector(state).entity
 
 // Query the store for all facts with specific subject
 export function getSXX(state, triple) {
