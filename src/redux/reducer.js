@@ -1,6 +1,6 @@
-export socket, { idReducer as id } from 'cape-redux-socket'
-export { fieldReducer as form } from 'redux-field'
-export { historyReducer as history } from 'redux-history-sync'
-
 export errorMessage from './modules/errorMessage'
+export { fieldReducer as form } from 'redux-field'
 export graph from './graph'
+export { historyReducer as history } from 'redux-history-sync'
+export session from './modules/session'
+export socket, { idReducer as id } from 'cape-redux-socket'

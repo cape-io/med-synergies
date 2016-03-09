@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import routeSelector from '../redux/routes'
 
 import Router from './Router'
-import Footer from './Footer'
+// import Footer from '../components/Footer'
 
 class App extends Component {
   render() {
@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <div className="container">
         <Router route={route} />
-        <Footer />
       </div>
     )
   }

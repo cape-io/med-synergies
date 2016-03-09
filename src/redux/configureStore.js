@@ -3,10 +3,12 @@ import { applyMiddleware, combineReducers, createStore, compose } from 'redux'
 import merge from 'lodash/merge'
 
 import {
+  createHistoryCache,
   syncHistoryWithStore,
   historyMiddleware,
   getInitState,
 } from 'redux-history-sync'
+const historyCache = createHistoryCache()
 
 import DevTools from '../containers/DevTools'
 
@@ -20,7 +22,7 @@ import * as reducer from './reducer'
 
 // Define the middeware we want to apply to the store.
 const middleware = [
-  historyMiddleware(window.history),
+  historyMiddleware(window.history, historyCache),
   socket,
 ]
 
@@ -28,10 +30,10 @@ const middleware = [
 // Allow the function to accept an initialState object.
 export default function configureStore(initialState) {
   const calculatedState = {
-    db: {
+    history: getInitState(window.location, window.document.title),
+    session: {
       currentYear: new Date().getFullYear(),
     },
-    history: getInitState(window.location, window.document.title),
   }
   const initState = merge(initialState, calculatedState)
   const store = createStore(
@@ -52,7 +54,7 @@ export default function configureStore(initialState) {
       store.replaceReducer(nextRootReducer)
     })
   }
-  syncHistoryWithStore(store, window)
+  syncHistoryWithStore(store, window, historyCache)
 
   return store
 }
