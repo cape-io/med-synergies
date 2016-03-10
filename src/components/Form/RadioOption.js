@@ -4,7 +4,7 @@ function RadioOption({ id, field, formEvent, label, styles, type, value }) {
   const checked = field.value === value
   return (
     <span>
-      <input type={type} id={id} {...formEvent} value={value} checked={checked} />
+      <input type={type} id={id} onChange={formEvent.onChange} value={value} checked={checked} />
       <label htmlFor={id} className={styles}><span className="radio-toggle" />{label}</label>
     </span>
   )
