@@ -1,30 +1,16 @@
-import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { reduxForm } from 'redux-form'
-import map from 'lodash/map'
-import Quiz from '../components/Quiz'
-import { simpleRequired } from '../utils/formValidation'
+// import Quiz from '../components/Quiz'
+import Quiz from '../components/Loading'
 import { handleSubmit } from '../redux/modules/quiz'
-
+import { questionSelector } from '../redux/select'
 // Redux connections.
 
 function mapStateToProps(state) {
-  const { db: { questions, options, submit } } = state
-  const fields = map(questions, 'id')
-
-  return {
-    fields,
-    form: 'quiz',
-    options,
-    questions,
-    submit,
-    validate: simpleRequired(fields),
-  }
+  console.log(questionSelector(state))
+  return {}
 }
 const mapDispatchToProps = {
   onSubmit: handleSubmit,
 }
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-  reduxForm()
-)(Quiz)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Quiz)

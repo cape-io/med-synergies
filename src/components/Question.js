@@ -25,6 +25,7 @@ function Question({ field, text, options, active, index }) {
 }
 
 Question.propTypes = {
+  field: PropTypes.object.isRequired,
   text: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
   active: PropTypes.bool.isRequired,

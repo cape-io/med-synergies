@@ -32,6 +32,7 @@ function Quiz({ questions, options, submit, invalid, fields, handleSubmit, prist
 
 Quiz.propTypes = {
   fields: PropTypes.object.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
   invalid: PropTypes.bool.isRequired,
   options: PropTypes.array.isRequired,
   pristine: PropTypes.bool.isRequired,
