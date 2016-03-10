@@ -15,9 +15,9 @@
     }
   ],
   "scripts": {
-    "clean": "rimraf static/js",
+    "clean": "rimraf static/js/",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build": "npm run clean && npm run build:webpack",
+    "build": "npm run build:webpack",
     "start": "node server.js",
     "lint": "eslint src"
   },
