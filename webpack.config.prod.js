@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  devtool: 'source-map',
   entry: [
     './src/index',
   ],
@@ -30,17 +29,11 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        include: path.join(__dirname, 'src'),
-        loader: 'babel',
-        query: {
-          cacheDirectory: true,
-          presets: [ 'es2015', 'stage-0', 'react' ],
-        },
-      },
-    ],
+    loaders: [ {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      include: path.join(__dirname, 'src'),
+      loaders: [ 'babel?cacheDirectory' ],
+    } ],
   },
 }
