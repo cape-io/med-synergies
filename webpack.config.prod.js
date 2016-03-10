@@ -15,11 +15,16 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production'),
+        NODE_ENV: JSON.stringify('production'),
       },
     }),
     new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        drop_console: false,
+        warnings: false,
+      },
       compressor: {
+        drop_console: false,
         warnings: false,
       },
     }),
@@ -33,7 +38,7 @@ module.exports = {
         loader: 'babel',
         query: {
           cacheDirectory: true,
-          presets: ['es2015', 'stage-0', 'react'],
+          presets: [ 'es2015', 'stage-0', 'react' ],
         },
       },
     ],
