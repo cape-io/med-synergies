@@ -1,36 +1,27 @@
-import reduce from 'lodash/reduce'
+import isFunction from 'lodash/isFunction'
+import noop from 'lodash/noop'
+import createAction from '../createAction'
 
 const defaultState = {
   showResult: false,
-  score: 0,
 }
 
-const SET_SCORE = 'quiz/SET_RESULT'
 const CLOSE_BOX = 'quiz/CLOSE_BOX'
+export const closeBox = createAction(CLOSE_BOX, noop)
+
+const OPEN_BOX = 'quiz/OPEN_BOX'
+export const handleSubmit = createAction(OPEN_BOX, noop)
+
+const reducers = {
+  [CLOSE_BOX]: () => defaultState,
+  [OPEN_BOX]: () => ({ showResult: true }),
+}
 
 export default function reducer(state = defaultState, action) {
-  switch (action.type) {
-    case SET_SCORE:
-      return { ...state, showResult: true, score: action.payload }
-    case CLOSE_BOX:
-      return { ...state, showResult: false }
-    default:
-      return state
-  }
+  if (!action.type || !isFunction(reducers[action.type])) return state
+  return reducers[action.type]()
 }
 
-export function handleSubmit(data) {
-  function reduceFunc(result, value) {
-    return result + parseInt(value, 10)
-  }
-  return {
-    type: SET_SCORE,
-    payload: reduce(data, reduceFunc, 0),
-  }
-}
-
-export function closeBox() {
-  return {
-    type: CLOSE_BOX,
-  }
+export function selectShowResult(state) {
+  return state.quiz.showResult
 }

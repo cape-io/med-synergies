@@ -1,18 +1,18 @@
 import React, { PropTypes } from 'react'
 import classnames from 'classnames'
+import { connectField } from 'redux-field'
 
 import InputRadios from './Form/InputRadios'
 
-function Question({ field, text, options, active, index }) {
-  const { touched, error } = field
+function Question({ form, formEvent, text, options, active, id, index }) {
   const cssNames = classnames('clearfix', 'question', 'list-group-item', 'form-group', 'row', {
     active,
-    'has-error': touched && error,
+    'has-error': form.hasError,
   })
   return (
     <li className={cssNames}>
       <div className="col-sm-7">
-        <label htmlFor={field.name} >
+        <label htmlFor={id} >
           <span className="question-index">
             {index}
           </span>
@@ -21,13 +21,15 @@ function Question({ field, text, options, active, index }) {
           </span>
         </label>
       </div>
-      <InputRadios field={field} options={options} />
+      <InputRadios field={form} formEvent={formEvent} id={id} options={options} />
     </li>
   )
 }
 
 Question.propTypes = {
-  field: PropTypes.object.isRequired,
+  form: PropTypes.object.isRequired,
+  formEvent: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
   active: PropTypes.bool.isRequired,
@@ -37,4 +39,4 @@ Question.defaultProps = {
   active: false,
 }
 
-export default Question
+export default connectField()(Question)

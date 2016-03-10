@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 
-function RadioOption({ id, field, label, styles, type, value }) {
+function RadioOption({ id, field, formEvent, label, styles, type, value }) {
   const checked = field.value === value
   return (
     <span>
-      <input type={type} id={id} {...field} value={value} checked={checked} />
+      <input type={type} id={id} {...formEvent} value={value} checked={checked} />
       <label htmlFor={id} className={styles}><span className="radio-toggle" />{label}</label>
     </span>
   )
@@ -12,6 +12,7 @@ function RadioOption({ id, field, label, styles, type, value }) {
 RadioOption.propTypes = {
   id: PropTypes.string.isRequired,
   field: PropTypes.object.isRequired,
+  formEvent: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
   styles: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,

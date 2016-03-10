@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react'
-import map from 'lodash/map'
 
 import Contact from './Contact'
 
-function Result({ author, closeBox, contact, lead, learnMore, header, points, score, resultBox, color }) {
-  const { scoreTxt, submit } = resultBox
+function Result({ author, closeBox, contact, lead, learnMore, header, score, resultBox, color }) {
+  const { scoreTxt } = resultBox
   function clickOverlay(evt) {
     const targetId = evt.target.id
     if (targetId && targetId === 'results-overlay') {
@@ -23,18 +22,13 @@ function Result({ author, closeBox, contact, lead, learnMore, header, points, sc
           <div className="center-trick">
             <div className="score-box" style={{ color: '#' + color }}>{score}</div>
             <div className="score-words">
-              <p><strong>{lead[0]}</strong> {lead[1]}</p>
-              <p>{resultBox.lead} <strong>{author + '.'}</strong></p>
+              <p>{lead}</p>
+              <p>{resultBox.lead} <strong>{ author + '.' }</strong></p>
             </div>
           </div>
         </div>
         <div className="score-bottom">
-          <h2>{header + ':'}</h2>
-          <ul>
-            {
-              map(points, (point, index) => <li key={index}>{point}</li>)
-            }
-          </ul>
+          <h2>{ header }</h2>
           <div className="action">
             <div className="action-box">
               <label>{learnMore.label}</label>

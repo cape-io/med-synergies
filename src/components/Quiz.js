@@ -4,7 +4,7 @@ import map from 'lodash/map'
 import Question from './Question'
 import Submit from './Form/SubmitButtons'
 
-function Quiz({ questions, submit, invalid, handleSubmit, pristine }) {
+function Quiz({ canSubmit, onSubmit, score, submit, questions }) {
   return (
     <div className="main">
       <ol className="list-group">
@@ -12,6 +12,7 @@ function Quiz({ questions, submit, invalid, handleSubmit, pristine }) {
           map(questions, question => (
             <Question
               key={question.id}
+              prefix={[ 'quiz', question.id ]}
               field={{}}
               {...question}
             />
@@ -20,20 +21,19 @@ function Quiz({ questions, submit, invalid, handleSubmit, pristine }) {
       </ol>
       <Submit
         text={submit}
-        handleSubmit={handleSubmit}
-        invalid={invalid}
-        pristine={pristine}
+        onSubmit={onSubmit}
+        canSubmit={canSubmit}
       />
+      <span>{score}</span>
     </div>
   )
 }
 
 Quiz.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  invalid: PropTypes.bool,
-  options: PropTypes.array.isRequired,
-  pristine: PropTypes.bool,
+  onSubmit: PropTypes.func.isRequired,
+  canSubmit: PropTypes.bool,
   questions: PropTypes.array.isRequired,
+  score: PropTypes.number,
   submit: PropTypes.string.isRequired,
 }
 Quiz.defaultProps = {}
