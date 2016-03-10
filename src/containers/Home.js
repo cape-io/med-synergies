@@ -11,7 +11,7 @@ function Home(props) {
   return (
     <div className="home">
       <Header {...pick(props, 'intro', 'logo', 'title', 'lead')} />
-      <Quiz />
+      <Quiz {...pick(props, 'submit')} />
       <Footer {...pick(props, 'author', 'currentYear', 'contact', 'copyright', 'learnMore')} />
     </div>
   )

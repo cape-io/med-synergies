@@ -5,20 +5,22 @@ import InputRadios from './Form/InputRadios'
 
 function Question({ field, text, options, active, index }) {
   const { touched, error } = field
-  const cssNames = classnames('clearfix', 'question', 'list-group-item', 'form-group', {
+  const cssNames = classnames('clearfix', 'question', 'list-group-item', 'form-group', 'row', {
     active,
     'has-error': touched && error,
   })
   return (
     <li className={cssNames}>
-      <label htmlFor={field.name} className="col-sm-7">
-        <span className="question-index">
-          {index}
-        </span>
-        <span className="question-text">
-          { text }
-        </span>
-      </label>
+      <div className="col-sm-7">
+        <label htmlFor={field.name} >
+          <span className="question-index">
+            {index}
+          </span>
+          <span className="question-text">
+            { text }
+          </span>
+        </label>
+      </div>
       <InputRadios field={field} options={options} />
     </li>
   )

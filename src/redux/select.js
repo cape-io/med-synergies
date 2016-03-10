@@ -36,9 +36,10 @@ function getOptions({ option1, option2, option3 }) {
 }
 export function selectQuestions(state) {
   const items = orderBy(filter(state, { additionalType: 'Questions' }), 'dataFeedElement.number')
-  return map(items, ({ dataFeedElement, id }) => ({
+  return map(items, ({ dataFeedElement, id }, index) => ({
     options: getOptions(dataFeedElement),
     id,
+    index: index + 1,
     text: trim(dataFeedElement.question),
   }))
 }
