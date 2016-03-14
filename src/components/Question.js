@@ -11,7 +11,7 @@ function Question({ form, formEvent, text, options, active, id, index }) {
   })
   return (
     <li className={cssNames}>
-      <div className="col-sm-7">
+      <div className="col-sm-6">
         <label htmlFor={id} >
           <span className="question-index">
             {index}

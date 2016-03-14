@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html, body, #root, #root > div, #root > div > div {
@@ -47,7 +47,6 @@ img.logo {
   display: block;
   float: left;
   width: auto;
-  height: 32px;
 }
 
 header h1 {
@@ -64,21 +63,13 @@ header h1::before {
   margin: 0 10px;
   content: '|';
 }
-header div.lead {
-  font-weight: 600;
+header div.leader {
   float: none;
   clear: both;
   margin: 10px 0;
   margin-bottom: 30px;
   padding: 19px;
   color: rgb(255, 255, 255);
-  background: #00aeef;
-}
-header div.lead p.lead {
-  font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 0;
-  color: #262626;
 }
 
 /*** FOOTER ***/
@@ -135,9 +126,7 @@ footer .copyright {
 .question label {
   padding-left: 0;
 }
-.question > div label {
-  text-transform: uppercase;
-}
+
 .question label .question-index {
   font-weight: 700;
 
@@ -205,11 +194,11 @@ input[type='radio'] + label span.radio-toggle {
 }
 
 input[type='radio'] + label:hover .radio-toggle {
-  background-color: rgba(155,183,59,.333333);
+  background-color: #00AEEF;
 }
 
 input[type='radio']:checked + label span.radio-toggle {
-  background-color: #9bb73b;
+  background-color: #00AEEF;
 }
 
 input[type='radio'] + label span.radio-toggle,

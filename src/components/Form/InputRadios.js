@@ -4,7 +4,7 @@ import RadioOption from './RadioOption'
 // Print RadioOption for each options.
 function InputRadios({ options, id, ...rest }) {
   return (
-    <div className="col-sm-5">
+    <div className="col-sm-6 row">
       {
         options.map(({ value, label }) => {
           const key = `${id}-${value}`

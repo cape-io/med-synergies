@@ -3,15 +3,15 @@ import React, { PropTypes } from 'react'
 function Header({ logo, title, intro, lead }) {
   return (
     <header>
-      <div className="bar">
+      <div className="bar" style={{ height: 150 }}>
         <a href={logo.href} title={logo.alt}>
           <img src={logo.src} className="logo" alt={logo.alt} />
         </a>
-        <h1>{title}</h1>
+        <h1 style={{ textTransform: 'uppercase' }}>{title}</h1>
       </div>
-      <div className="lead">
-        <p className="intro">{intro}</p>
-        <p className="lead">{lead}</p>
+      <div className="leader" style={{ background: '#00aeef' }}>
+        <h3 className="intro">{intro}</h3>
+        <p style={{ marginTop: 20 }}>{lead}</p>
       </div>
     </header>
   )

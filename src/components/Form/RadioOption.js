@@ -3,10 +3,13 @@ import React, { PropTypes } from 'react'
 function RadioOption({ id, field, formEvent, label, styles, type, value }) {
   const checked = field.value === value
   return (
-    <span>
+    <div className="col-sm-4">
       <input type={type} id={id} onChange={formEvent.onChange} value={value} checked={checked} />
-      <label htmlFor={id} className={styles}><span className="radio-toggle" />{label}</label>
-    </span>
+      <label htmlFor={id} className={styles} style={{ textTransform: 'uppercase' }}>
+        <span className="radio-toggle" />
+        <span className="radio-label">{label}</span>
+      </label>
+    </div>
   )
 }
 RadioOption.propTypes = {
