@@ -11,13 +11,13 @@ function Header({ logo, title, intro, lead }) {
           <h1 style={{ textTransform: 'uppercase' }}>{title}</h1>
         </div>
       </div>
-    </header>
-    <div className="leader" style={{ background: '#00aeef' }}>
-      <div className="container">
-        <h3 className="intro">{intro}</h3>
-        <p style={{ marginTop: 20 }}>{lead}</p>
+      <div className="leader" style={{ background: '#00aeef' }} >
+        <div className="container">
+          <h3 className="intro">{intro}</h3>
+          <p style={{ marginTop: 20 }} >{lead}</p>
+        </div>
       </div>
-    </div>
+    </header>
   )
 }
 
