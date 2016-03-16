@@ -12,11 +12,14 @@ import Result from './Result'
 function Home(props) {
   return (
     <div className="home">
-      <Header {...pick(props, 'intro', 'logo', 'title', 'lead')} />
-      <Quiz {...pick(props, 'submit')} />
-      { props.showResult &&
-        <Result {...pick(props, 'author', 'learnMore', 'contact', 'resultBox')} />
-      }
+        <div className="fixfooter">
+        <Header {...pick(props, 'intro', 'logo', 'title', 'lead')} />
+        <Quiz {...pick(props, 'submit')} />
+        { props.showResult &&
+          <Result {...pick(props, 'author', 'learnMore', 'contact', 'resultBox')} />
+        }
+        <div className="push"></div>
+      </div>
       <Footer {...pick(props, 'author', 'currentYear', 'contact', 'copyright', 'learnMore')} />
     </div>
   )

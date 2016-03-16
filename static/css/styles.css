@@ -16,7 +16,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-html, body, #root, #root > div, #root > div > div {
+html, body, #root, #root > div, #root > div > div, #root .home {
   height: 100%;
 }
 a {
@@ -24,19 +24,6 @@ a {
 }
 a:hover {
   color: #9BB73B;
-}
-/* the bottom margin is the negative value of the footer's height */
-.fixfooter {
-  min-height: 100%;
-  margin: 0 auto -255px;
-}
-
-/* .push must be the same height as .footer */
-footer, .push {
-  height: 255px;
-}
-.fixfooter .form-group.pb {
-  padding-bottom: 8rem;
 }
 
 /*** HEADER ***/
@@ -80,6 +67,22 @@ footer {
   background-color: #00596;
   background-color: rgb(012,046,110);
 }
+
+/* stick footer to bottom no matter what */
+/* the bottom margin is the negative value of the footer's height */
+.fixfooter {
+  min-height: 100%;
+  margin: 0 auto -400px;
+}
+
+/* .push must be the same height as .footer */
+footer, .push {
+  height: 400px;
+}
+.fixfooter .form-group.pb {
+  padding-bottom: 200px;
+}
+
 .contact button {
   padding: 0;
 
