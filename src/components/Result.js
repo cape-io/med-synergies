@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 import Contact from './Contact'
 
-function Result({ author, closeBox, contact, lead, learnMore, header, score, resultBox, color }) {
+function Result({ author, closeBox, contact, lead, learnMore, header, description, score, resultBox, color }) {
   const { scoreTxt } = resultBox
   function clickOverlay(evt) {
     const targetId = evt.target.id
@@ -22,12 +22,13 @@ function Result({ author, closeBox, contact, lead, learnMore, header, score, res
           <div className="center-trick">
             <div className="score-box" style={{ color: '#' + color }}>{score}</div>
             <div className="score-words">
-              <p>{lead}</p>
+              <p>{ header }</p>
             </div>
           </div>
         </div>
         <div className="score-bottom">
-          <h2>{ header }</h2>
+          <h2>{ lead }</h2>
+          <p>{ description }</p>
           <div className="action">
             <button onClick={handleLearnMore}>{learnMore.button}</button>
             <Contact {...contact} />
@@ -46,6 +47,7 @@ Result.propTypes = {
   lead: PropTypes.array.isRequired,
   learnMore: PropTypes.object.isRequired,
   header: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   points: PropTypes.array.isRequired,
   score: PropTypes.string.isRequired,
   resultBox: PropTypes.object.isRequired,
