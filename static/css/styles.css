@@ -243,9 +243,8 @@ input[type='radio']:checked + label span.radio-toggle {
 #result-box .score-top {
   min-height: 180px;
   padding: 20px;
-
   color: #fff;
-  background: rgb(77, 77, 77);
+  background: #00AEEF;
 }
 #result-box .score-top::after {
   content: '';
@@ -260,7 +259,7 @@ input[type='radio']:checked + label span.radio-toggle {
   margin-right: 20px;
   padding: 0 20px;
   text-align: center;
-  color: #9bb73b;
+  color: #E87722;
   background: #fff;
   vertical-align: middle;
   display: inline-block;
@@ -281,39 +280,25 @@ input[type='radio']:checked + label span.radio-toggle {
 }
 #result-box .score-bottom h2 {
   font-size: 1.4em;
-
   margin-top: 0;
   margin-bottom: 40px;
-
-  color: #da291c;
+  color: #E87722;
 }
 #result-box .action {
   display: flex;
-
   margin-top: 40px;
-}
-#result-box .action-box {
-  margin-right: 25px;
-  padding: 15px;
-
-  color: #fff;
-  background: #da291c;
 }
 #result-box .action-box button {
   font-weight: 700;
-
   margin-left: 30px;
   padding: 5px 25px;
-
-  text-transform: uppercase;
-
   color: #fff;
   border: none;
   border-radius: 30px;
-  background: #440d09;
+  background: #E87722;
 }
 #result-box .action-box button:hover {
-  color: #DA291C;
+  color: black;
 }
 #result-box li {
   margin: 15px 0;
