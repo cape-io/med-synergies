@@ -23,17 +23,13 @@ function Result({ author, closeBox, contact, lead, learnMore, header, score, res
             <div className="score-box" style={{ color: '#' + color }}>{score}</div>
             <div className="score-words">
               <p>{lead}</p>
-              <p>{resultBox.lead} <strong>{ author + '.' }</strong></p>
             </div>
           </div>
         </div>
         <div className="score-bottom">
           <h2>{ header }</h2>
           <div className="action">
-            <div className="action-box">
-              <label>{learnMore.label}</label>
-              <button onClick={handleLearnMore}>{learnMore.button}</button>
-            </div>
+            <button onClick={handleLearnMore}>{learnMore.button}</button>
             <Contact {...contact} />
           </div>
         </div>
