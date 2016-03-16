@@ -5,6 +5,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  color: rgb(88,88,91);
 }
 
 html, body, #root, #root > div, #root > div > div, #root .home {
@@ -52,7 +53,9 @@ header div.leader {
   padding: 19px;
   color: rgb(255, 255, 255);
 }
-
+.intro {
+  text-transform: uppercase;
+}
 /*** FOOTER ***/
 footer {
   font-size: 1.2em !important;
@@ -74,6 +77,7 @@ footer, .push {
   height: 18.75em;
 }
 .fixfooter .form-group.pb {
+  padding-top: 4.6875em;
   padding-bottom: 4.6875em;
 }
 
