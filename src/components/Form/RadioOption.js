@@ -23,6 +23,6 @@ RadioOption.propTypes = {
 }
 RadioOption.defaultProps = {
   type: 'radio',
-  styles: '',
+  styles: 'clearfix',
 }
 export default RadioOption

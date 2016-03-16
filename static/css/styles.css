@@ -1,13 +1,4 @@
-/*
-Grey Text Hex = 262626
-Green background & "select" status Hex Color: 9BB73B
-Yellow Hex Color = EEBD1C
-Grey color hex = cccccc
-Dark Grey Hex = 262626
-Red Text Hex Color = DA291C
-Dark red button color Hex = 440d09
-Yellow/Amber Text Hex Color = EEBD1C
-*/
+
 html {
   margin: 0;
 }
@@ -184,22 +175,16 @@ input[type='radio'] {
 }
 
 input[type='radio'] + label span.radio-toggle {
-  display: inline-block;
-
-  width: 13px;
-  height: 13px;
-
-  cursor: pointer;
-  vertical-align: middle;
-
+  background-color: #fff;
+  border: 1px solid #333;
   -moz-border-radius: 50%;
        border-radius: 50%;
-}
-input[type='radio'] + label span.radio-toggle {
-  margin: -2px 9px 0 30px;
-
-  border: 1px solid #333;
-  background-color: #fff;
+  cursor: pointer;
+  float:left;
+  margin: 2px 0 0 0;
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
 }
 
 input[type='radio'] + label:hover .radio-toggle {
@@ -216,6 +201,14 @@ input[type='radio']:checked + label span.radio-toggle {
      -moz-transition: background-color 0.2s linear;
        -o-transition: background-color 0.2s linear;
           transition: background-color 0.2s linear;
+}
+
+.radio-label {
+  font-family: 'Titillium Web', sans-serif;
+  display: block;;
+  font-size: .9em;
+  margin-left: 20px;
+  width: 100%;
 }
 
 /*** RESULTS ***/
