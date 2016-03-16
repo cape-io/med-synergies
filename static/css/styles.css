@@ -265,7 +265,7 @@ input[type='radio']:checked + label span.radio-toggle {
   display: inline-block;
 }
 #result-box .score-words {
-  font-size: 1.2em;
+  font-size: 2.4em;
   width: calc(100% - 170px);
   white-space: normal;
   display: inline-block;
@@ -288,17 +288,22 @@ input[type='radio']:checked + label span.radio-toggle {
   display: flex;
   margin-top: 40px;
 }
-#result-box .action-box button {
+#result-box .action button.orange {
   font-weight: 700;
-  margin-left: 30px;
-  padding: 5px 25px;
+  margin-right: 2rem;
+  font-size: 2rem;
+  padding: 0 1.5em;
   color: #fff;
   border: none;
-  border-radius: 30px;
+  border-radius: 3.5rem;
   background: #E87722;
+  height: 7rem;
+  line-height: 7rem;
+  text-transform: uppercase;
 }
-#result-box .action-box button:hover {
-  color: black;
+#result-box .action button.orange:hover {
+  color: rgb(88,88,91);
+  border: 2px solid rgb(88,88,91);
 }
 #result-box li {
   margin: 15px 0;

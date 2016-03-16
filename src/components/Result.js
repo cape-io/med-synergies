@@ -30,7 +30,7 @@ function Result({ author, closeBox, contact, lead, learnMore, header, descriptio
           <h2>{ lead }</h2>
           <p>{ description }</p>
           <div className="action">
-            <button onClick={handleLearnMore}>{learnMore.button}</button>
+            <button className="orange" onClick={handleLearnMore}>{learnMore.button}</button>
             <Contact {...contact} />
           </div>
         </div>
