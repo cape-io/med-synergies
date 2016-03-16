@@ -30,6 +30,18 @@ a:hover {
 header {
   padding-top: 30px;
 }
+header .bar {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+}
 img.logo {
   display: block;
   float: left;
@@ -37,10 +49,6 @@ img.logo {
 }
 
 header h1 {
-  font-size: 23px;
-  line-height: 35px;
-  float: left;
-  height: 70px;
   margin: 0;
   padding: 0;
 }
@@ -72,15 +80,15 @@ footer {
 /* the bottom margin is the negative value of the footer's height */
 .fixfooter {
   min-height: 100%;
-  margin: 0 auto -400px;
+  margin: 0 auto -18.75em;
 }
 
 /* .push must be the same height as .footer */
 footer, .push {
-  height: 400px;
+  height: 18.75em;
 }
 .fixfooter .form-group.pb {
-  padding-bottom: 200px;
+  padding-bottom: 4.6875em;
 }
 
 .contact button {
@@ -112,9 +120,11 @@ footer .copyright {
 .list-group-item {
   margin: 0;
   padding: 25px 0 15px 0;
-
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #E87722;
+}
+.list-group-item:last-of-type {
+  border-bottom: none;
 }
 .list-group-item::after {
   display: table;
@@ -146,24 +156,22 @@ footer .copyright {
 /*** FORM ELEMENTS ***/
 button.btn-success {
   font-weight: 700;
-
   margin-left: 65px;
   padding: 5px 40px;
-
   text-transform: uppercase;
-
-  color: #eebd1c;
-  border: 3px solid #eebd1c;
+  color: white;
+  border: 3px solid #E87722;
   border-radius: 23px;
-  background-color: #fff;
+  background-color: #E87722;
+  transition: all 300ms;
 }
 .btn-success:focus,
 .btn-success:active,
 .btn-success:active:focus,
 .btn-success:hover {
   color: #fff;
-  border: 3px solid #eebd1c;
-  background-color: #eebd1c;
+  border: 3px solid #00AEEF;
+  background-color: #00AEEF;
 }
 button.btn-success[disabled] {
   color: rgb(125, 125, 125);
