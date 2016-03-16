@@ -27,19 +27,14 @@ a:hover {
 }
 
 /*** HEADER ***/
-header {
-  padding-top: 30px;
-}
 header .bar {
   width: 100%;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
-
   align-items: center;
 }
 img.logo {
@@ -143,14 +138,16 @@ footer .copyright {
 
 .question label .question-index {
   font-weight: 700;
-
-  margin-right: 20px;
+  float:left;
+  margin-left: -15px;
 }
 .question label .question-index::after {
   content: '.';
 }
 .question label .question-text {
   font-weight: 400;
+  display: block;
+  margin-left: 15px;
 }
 
 /*** FORM ELEMENTS ***/
