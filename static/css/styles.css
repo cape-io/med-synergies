@@ -324,11 +324,31 @@ input[type='radio']:checked + label span.radio-toggle {
   body {
     padding-bottom: 360px;
   }
+  #result-box {
+    width: 90%;
+  }
+  #result-box .score-top,
+  #result-box .score-bottom {
+    padding: 2em;
+  }
+  #result-box .score-box,
+  #result-box .score-words {
+    display: block;
+    width: 100%;
+  }
+  #result-box .score-words {
+    margin-top: .5em;
+  }
   #result-box .action {
     display: block;
   }
   #result-box .action-box button {
     margin-left: 0;
+  }
+  #result-box .action button.orange {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1em;
   }
   header h1 {
     font-size: 1.8em;
