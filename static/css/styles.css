@@ -15,7 +15,7 @@ a {
   color: #262626;
 }
 a:hover {
-  color: #E87722;
+  color: #9BB73B;
 }
 
 /*** HEADER ***/
@@ -294,7 +294,7 @@ input[type='radio']:checked + label span.radio-toggle {
   font-size: 2rem;
   padding: 0 1.5em;
   color: #fff;
-  border: 2px solid #E87722;
+  border: none;
   border-radius: 3.5rem;
   background: #E87722;
   height: 7rem;
@@ -303,7 +303,7 @@ input[type='radio']:checked + label span.radio-toggle {
 }
 #result-box .action button.orange:hover {
   color: rgb(88,88,91);
-  border: 2px solid rgb(88,88,91);
+  border: 2px solid rgb(88,88,91);npm
 }
 #result-box li {
   margin: 15px 0;
@@ -333,16 +333,13 @@ input[type='radio']:checked + label span.radio-toggle {
   header h1 {
     font-size: 1.8em;
     line-height: auto;
-
     float: none;
     clear: both;
   }
   header h1::before {
     display: block;
     float: left;
-
     margin: 0 5px;
-
     content: ' ';
   }
   button.btn-success {
