@@ -15,7 +15,7 @@ a {
   color: #262626;
 }
 a:hover {
-  color: #9BB73B;
+  color: #E87722;
 }
 
 /*** HEADER ***/
@@ -294,7 +294,7 @@ input[type='radio']:checked + label span.radio-toggle {
   font-size: 2rem;
   padding: 0 1.5em;
   color: #fff;
-  border: none;
+  border: 2px solid #E87722;
   border-radius: 3.5rem;
   background: #E87722;
   height: 7rem;

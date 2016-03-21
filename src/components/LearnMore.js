@@ -4,7 +4,6 @@ function Contact({ author, learnMore }) {
   return (
     <div className="learn-more" style={{ float: 'right' }}>
       <strong>{author}</strong><br />
-      {learnMore.label + ' '}
       <a href={learnMore.link} style={{ textDecoration: 'underline' }}>{learnMore.button}</a>
     </div>
   )

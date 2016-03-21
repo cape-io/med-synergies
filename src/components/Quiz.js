@@ -25,7 +25,7 @@ function Quiz({ canSubmit, onSubmit, score, submit, questions }) {
           onSubmit={onSubmit}
           canSubmit={canSubmit}
         />
-        <span>{score}</span>
+        <span style={{ display: 'none' }}>{score}</span>
       </div>
     </div>
   )
