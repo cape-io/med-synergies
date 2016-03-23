@@ -1,3 +1,4 @@
 export const color = {
-  green: '#E87722',
+  blueLight: '#00aeef',
+  orange: '#E87722',
 }

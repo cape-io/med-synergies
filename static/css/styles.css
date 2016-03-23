@@ -35,14 +35,11 @@ img.logo {
   width: auto;
 }
 
-header h1 {
-  margin: 0;
-  padding: 0;
-}
 header h1::before {
   display: block;
   float: left;
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   content: '|';
 }
 header div.leader {

@@ -74,7 +74,7 @@ export const canSubmit = createSelector(
 )
 export const highScore = createSelector(
   questionSelector,
-  items => items[0] ? items[0].options[0].value * items.length : 100,
+  items => items[0] && items[0].options[0].value * items.length || 100,
 )
 export const quizScore = createSelector(
   quizValues,
