@@ -44,7 +44,7 @@ function getOpt(label, value) {
   return { label, value }
 }
 function getOptions({ option1, option2, option3 }) {
-  return [ getOpt(option1, 2), getOpt(option2, 1), getOpt(option3, 0) ]
+  return [ getOpt(option1, 4), getOpt(option2, 2), getOpt(option3, 1) ]
 }
 export function selectQuestions(state) {
   const items = orderBy(filter(state, { additionalType: 'Questions' }), 'dataFeedElement.number')
